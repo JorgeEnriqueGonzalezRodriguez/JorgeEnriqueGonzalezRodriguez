@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Apoyo - Jorge Enrique González Rodríguez</title>
+  <meta property="og:title" content="Registro de Apoyo - Jorge Enrique González Rodríguez" />
+  <meta property="og:description" content="Forma parte de la red de apoyo de Jorge Enrique González Rodríguez. ¡Tu respaldo es muy valioso!" />
+  <meta property="og:image" content="https://TU_USUARIO.github.io/JorgeEnriqueGonzalezRodriguez/jorge-portada.png" />
+  <meta property="og:url" content="https://TU_USUARIO.github.io/JorgeEnriqueGonzalezRodriguez/" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <div style="text-align: center;">
+    <img src="jorge-portada.png" alt="Jorge Enrique González Rodríguez" style="width: 100%; max-width: 600px; height: auto;" />
+  </div>
+
+  <div class="formulario">
+    <h2>Regístrate como parte de mi Red de Apoyo</h2>
+
+    <form action="URL_DEL_SCRIPT_DE_JORGE" method="POST" onsubmit="return mostrarConfirmacion();">
+
+      <label for="nombre">Nombre completo y apellidos:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="municipio">Municipio:</label>
+      <select id="municipio" name="municipio" required>
+        <option value="">--Selecciona tu municipio--</option>
+        <option value="Juárez">Ciudad Juárez</option>
+        <option value="Villa Ahumada">Villa Ahumada</option>
+        <option value="Guadalupe">Guadalupe</option>
+        <option value="Praxedis G. Guerrero">Praxedis G. Guerrero</option>
+      </select>
+
+      <label for="direccion">Dirección (como viene en tu INE, con Código Postal):</label>
+      <input type="text" id="direccion" name="direccion" required />
+
+      <label for="seccion">Sección Electoral:</label>
+      <input type="number" id="seccion" name="seccion" required />
+
+      <div style="text-align: center;">
+        <img src="seccion-electoral.jpg" alt="Ubicación sección electoral" style="width: 100%; max-width: 600px; height: auto;" />
+      </div>
+
+      <label for="vigencia">Año de vencimiento de tu INE:</label>
+      <input type="number" id="vigencia" name="vigencia" min="2024" max="2035" required />
+
+      <label for="celular">Celular (10 dígitos):</label>
+      <input type="tel" id="celular" name="celular" required />
+
+      <label for="dificultad">¿Cuenta con alguna dificultad para acudir a votar?</label>
+      <select id="dificultad" name="dificultad" required>
+        <option value="">--Selecciona una opción--</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="cual">¿Cuál?</label>
+      <input type="text" id="cual" name="cual" />
+
+      <label for="referido">Nombre de quien te invitó a apoyarme:</label>
+      <input type="text" id="referido" name="referido" />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="gracias-apoyo.jpg" alt="Gracias por registrarte" style="width: 100%; max-width: 600px; margin: 40px auto;" />
+  </div>
+
+  <script>
+    function mostrarConfirmacion() {
+      alert("Tu registro está completo. Muchas gracias");
+      setTimeout(() => document.querySelector("form").reset(), 100);
+      return true;
+    }
+  </script>
+
+</body>
+</html>
